@@ -7,20 +7,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/zysps1">
-  <title>categories | Marshal Zheng</title>
+  <title>相册 | Marshal Zheng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2016 from UESTC">
+  <meta name="description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($scrip">
 <meta name="keywords" content="curiosity; network engineering; programming; python; c; matlab; html&#x2F;css...">
 <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://github.com/zysps1/categories/index.html">
+<meta property="og:title" content="相册">
+<meta property="og:url" content="https://github.com/zysps1/photos/ins.css">
 <meta property="og:site_name" content="Marshal Zheng">
-<meta property="og:description" content="2016 from UESTC">
+<meta property="og:description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($scrip">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-02T10:06:16.291Z">
+<meta property="og:updated_time" content="2019-09-02T13:11:11.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="2016 from UESTC">
+<meta name="twitter:title" content="相册">
+<meta name="twitter:description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($scrip">
   
     <link rel="alternative" href="/atom.xml" title="Marshal Zheng" type="application/atom+xml">
   
@@ -185,7 +185,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-photos" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
 <!-- 
     
@@ -193,14 +193,10 @@
           
   
     <h1 class="article-title" itemprop="name">
-      categories
+      相册
     </h1>
   
 
-          
-          <a href="/marshal_zheng.github.io/categories/index.html" class="archive-article-date">
-  	<time datetime="2019-09-02T10:05:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
           
             
             
@@ -219,20 +215,36 @@
         
   
     <h1 class="article-title" itemprop="name">
-      categories
+      相册
     </h1>
   
 
-        
-        <a href="/marshal_zheng.github.io/categories/index.html" class="archive-article-date">
-  	<time datetime="2019-09-02T10:05:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <link rel="stylesheet" href="./ins.css">
+<div class="photos-btn-wrap">
+	<a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="noopener">Photos</a>
+	<a class="photos-btn" href="#">待续</a>
+</div>
+<div class="instagram itemscope">
+	<a href="https://www.instagram.com/lawlitewang20/" target="_blank" class="open-ins">图片正在加载中…</a>
+</div>
+<script>
+  (function() {
+    var loadScript = function(path) {
+      var $script = document.createElement('script')
+      document.getElementsByTagName('body')[0].appendChild($script)
+      $script.setAttribute('src', path)
+    }
+    setTimeout(function() {
+      loadScript('./ins.js')
+    }, 0)
+  })()
+</script>
+
       
 
       
@@ -290,7 +302,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/zysps1/categories/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/zysps1/photos/ins.css" alt="微信分享二维码">
     </div>
 </div>
 

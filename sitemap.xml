@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://github.com/zysps1/photos/index.html</loc>
+    
+    <lastmod>2019-09-02T13:10:56.123Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://github.com/zysps1/2018/11/23/test1/</loc>
     
     <lastmod>2019-09-02T13:00:59.643Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://github.com/zysps1/2019/09/02/hello-world/</loc>
     
     <lastmod>2019-09-02T13:00:59.627Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://github.com/zysps1/photos/index.html</loc>
-    
-    <lastmod>2019-09-02T10:12:22.079Z</lastmod>
     
   </url>
   

@@ -97,22 +97,9 @@
 			</div>
 		</nav>
 		<nav class="header-nav">
-			<div class="social">
-				
-					<a class="github" target="_blank" href="https://github.com/zysps1" title="github"><i class="icon-github"></i></a>
-				
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-				
-					<a class="rss" target="_blank" href="/marshal_zheng.github.io/atom.xml" title="rss"><i class="icon-rss"></i></a>
-				
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-				
-			</div>
-		
-			<!--音乐播放插件-->
-			<div style="margin-top:30px;">
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=240 height=52 src="//music.163.com/outchain/player?type=2&id=33035954&auto=1&height=32"></iframe>
-			</div>
+			<audio  id="bgMusic" loop="loop" preload="preload" autoplay="autoplay">
+				<source src="http://m10.music.126.net/20190902203936/f6751c6409d82dca6d88918e78d4085c/ymusic/0152/055a/5308/681ef6f50f20971ac5bddb07161fc6b5.mp3" type="audio/mp3">
+			</audio>
 		</nav>
 	</header>		
 </div>
@@ -335,7 +322,7 @@ var gitalk = new Gitalk({
 
 gitalk.render('gitalk-container')
 </script>
-
+  
 
 
           </div>

@@ -9,22 +9,22 @@
   <link rel="dns-prefetch" href="https://github.com/zysps1">
   <title>《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器 | Marshal Zheng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器 Marshal Zheng    2019-04-16  西瓜书笔记更新啦！ 7.1 贝叶斯决策论假设有$N$种可能类别标记，即$y = {c_1,c_2,\cdots,c_N}$，$\lambda_{ij}$是将一个真实标记为$c_j$的样本误分类为$c_i$所产生的损失，基于后验概率$P(c_i | x)$可获得将样本$x$分类为$c">
+  <meta name="description" content="《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器 Marshal Zheng    2019-04-16  西瓜书笔记更新啦！ 7.1 贝叶斯决策论假设有$N$种可能类别标记，即$y = {c_1,c_2,\cdots,c_N}$，$\lambda_{ij}$是将一个真实标记为$c_j$的样本误分类为$c_i$所产生的损失，基于后验概率$P(c_i | x)$可获得将样本$x$分类为">
 <meta name="keywords" content="算法,机器学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器">
 <meta property="og:url" content="https://github.com/zysps1/2019/09/03/《机器学习》西瓜书笔记--chapter7贝叶斯分类器/index.html">
 <meta property="og:site_name" content="Marshal Zheng">
-<meta property="og:description" content="《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器 Marshal Zheng    2019-04-16  西瓜书笔记更新啦！ 7.1 贝叶斯决策论假设有$N$种可能类别标记，即$y = {c_1,c_2,\cdots,c_N}$，$\lambda_{ij}$是将一个真实标记为$c_j$的样本误分类为$c_i$所产生的损失，基于后验概率$P(c_i | x)$可获得将样本$x$分类为$c">
+<meta property="og:description" content="《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器 Marshal Zheng    2019-04-16  西瓜书笔记更新啦！ 7.1 贝叶斯决策论假设有$N$种可能类别标记，即$y = {c_1,c_2,\cdots,c_N}$，$\lambda_{ij}$是将一个真实标记为$c_j$的样本误分类为$c_i$所产生的损失，基于后验概率$P(c_i | x)$可获得将样本$x$分类为">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1287558/201904/1287558-20190416100057390-249384454.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1287558/201904/1287558-20190416100220025-1256649231.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1287558/201904/1287558-20190416100240779-888349338.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1287558/201904/1287558-20190416100313284-1815603280.png">
-<meta property="og:updated_time" content="2019-09-03T08:11:18.102Z">
+<meta property="og:updated_time" content="2019-09-03T08:31:10.321Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器">
-<meta name="twitter:description" content="《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器 Marshal Zheng    2019-04-16  西瓜书笔记更新啦！ 7.1 贝叶斯决策论假设有$N$种可能类别标记，即$y = {c_1,c_2,\cdots,c_N}$，$\lambda_{ij}$是将一个真实标记为$c_j$的样本误分类为$c_i$所产生的损失，基于后验概率$P(c_i | x)$可获得将样本$x$分类为$c">
+<meta name="twitter:description" content="《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器 Marshal Zheng    2019-04-16  西瓜书笔记更新啦！ 7.1 贝叶斯决策论假设有$N$种可能类别标记，即$y = {c_1,c_2,\cdots,c_N}$，$\lambda_{ij}$是将一个真实标记为$c_j$的样本误分类为$c_i$所产生的损失，基于后验概率$P(c_i | x)$可获得将样本$x$分类为">
 <meta name="twitter:image" content="https://img2018.cnblogs.com/blog/1287558/201904/1287558-20190416100057390-249384454.png">
   
   
@@ -235,7 +235,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="《机器学习》西瓜书笔记——chapter-7：贝叶斯分类器"><a href="#《机器学习》西瓜书笔记——chapter-7：贝叶斯分类器" class="headerlink" title="《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器"></a><center>《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器</center></h3><center> Marshal Zheng
+        <meta name="referrer" content="no-referrer">
+
+<h3 id="《机器学习》西瓜书笔记——chapter-7：贝叶斯分类器"><a href="#《机器学习》西瓜书笔记——chapter-7：贝叶斯分类器" class="headerlink" title="《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器"></a><center>《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器</center></h3><center> Marshal Zheng
 </center>
 
 <center> 2019-04-16
@@ -444,8 +446,8 @@
     </a>
   
   
-    <a href="/marshal_zheng.github.io/2019/09/03/python正则理解与总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python 正则</div>
+    <a href="/marshal_zheng.github.io/2019/09/03/夜间长跑的思考/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">夜间长跑的思考</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -672,15 +674,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">个人感悟</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">

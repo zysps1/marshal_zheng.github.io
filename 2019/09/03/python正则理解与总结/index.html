@@ -7,19 +7,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/zysps1">
-  <title>Archives: 2018 | Marshal Zheng</title>
+  <title>python 正则 | Marshal Zheng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2016 from UESTC">
-<meta name="keywords" content="curiosity; network engineering; programming; python; c; matlab; html&#x2F;css...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Marshal Zheng">
-<meta property="og:url" content="https://github.com/zysps1/archives/2018/index.html">
+  <meta name="description" content="正则理解与总结written by Marshal Zheng  [TOC] 一、正则语法 元字符 \b：匹配单词的开始或者结束 \d：匹配数字 \s：匹配任意不可见字符（空格、换行符、制表符等） \w：匹配任意Unicode字符集，包括字母、数字、下换线、汉字等；匹配出换行符’\n’之外的任意字符 ^或者\A：匹配字符串或行的起始位置 $或者\Z：匹配字符串或行的结束位置   限定词 *：重复0">
+<meta name="keywords" content="python,正则表达式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python 正则">
+<meta property="og:url" content="https://github.com/zysps1/2019/09/03/python正则理解与总结/index.html">
 <meta property="og:site_name" content="Marshal Zheng">
-<meta property="og:description" content="2016 from UESTC">
+<meta property="og:description" content="正则理解与总结written by Marshal Zheng  [TOC] 一、正则语法 元字符 \b：匹配单词的开始或者结束 \d：匹配数字 \s：匹配任意不可见字符（空格、换行符、制表符等） \w：匹配任意Unicode字符集，包括字母、数字、下换线、汉字等；匹配出换行符’\n’之外的任意字符 ^或者\A：匹配字符串或行的起始位置 $或者\Z：匹配字符串或行的结束位置   限定词 *：重复0">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-03T07:59:48.313Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Marshal Zheng">
-<meta name="twitter:description" content="2016 from UESTC">
+<meta name="twitter:title" content="python 正则">
+<meta name="twitter:description" content="正则理解与总结written by Marshal Zheng  [TOC] 一、正则语法 元字符 \b：匹配单词的开始或者结束 \d：匹配数字 \s：匹配任意不可见字符（空格、换行符、制表符等） \w：匹配任意Unicode字符集，包括字母、数字、下换线、汉字等；匹配出换行符’\n’之外的任意字符 ^或者\A：匹配字符串或行的起始位置 $或者\Z：匹配字符串或行的结束位置   限定词 *：重复0">
   
   
     <link rel="icon" href="/favicon.png">
@@ -182,80 +183,434 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-python正则理解与总结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+<!-- 
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/marshal_zheng.github.io/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/marshal_zheng.github.io/2018/11/23/test1/" class="archive-article-date">
-  	<time datetime="2018-11-23T13:07:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+          
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/marshal_zheng.github.io/2018/11/23/test1/">HTML入门笔记</a>
+    <h1 class="article-title" itemprop="name">
+      python 正则
     </h1>
   
 
-        <div class="article-info info-on-right">
           
+          <a href="/marshal_zheng.github.io/2019/09/03/python正则理解与总结/" class="archive-article-date">
+  	<time datetime="2019-09-03T07:59:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+</a>
+          
+            
+            
+          
+            <span class="archive-article-date">
+                阅读量 <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+            
+            
+        </header> -->
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python 正则
+    </h1>
+  
+
+        
+        <a href="/marshal_zheng.github.io/2019/09/03/python正则理解与总结/" class="archive-article-date">
+  	<time datetime="2019-09-03T07:59:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="正则理解与总结"><a href="#正则理解与总结" class="headerlink" title="正则理解与总结"></a><center>正则理解与总结</center></h3><center>written by Marshal Zheng
+
+<p>[TOC]</p>
+<h4 id="一、正则语法"><a href="#一、正则语法" class="headerlink" title="一、正则语法"></a>一、正则语法</h4><ul>
+<li><h5 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h5><ul>
+<li>\b：匹配单词的开始或者结束</li>
+<li>\d：匹配数字</li>
+<li>\s：匹配任意不可见字符（空格、换行符、制表符等）</li>
+<li>\w：匹配任意Unicode字符集，包括字母、数字、下换线、汉字等；匹配出换行符’\n’之外的任意字符</li>
+<li>^或者\A：匹配字符串或行的起始位置</li>
+<li>$或者\Z：匹配字符串或行的结束位置</li>
+</ul>
+</li>
+<li><h5 id="限定词"><a href="#限定词" class="headerlink" title="限定词"></a>限定词</h5><ul>
+<li>*：重复0次或更多次</li>
+<li>+：重复1次或者更多次</li>
+<li>？：重复0次或者1次</li>
+<li>{n}：重复n次</li>
+<li>{n,}：重复n次或更多次</li>
+<li>{n,m}：重复n到m次</li>
+</ul>
+</li>
+<li><h5 id="反义词"><a href="#反义词" class="headerlink" title="反义词"></a>反义词</h5><ul>
+<li>\B：匹配非单词的开始或结束</li>
+<li>\D：匹配非数字</li>
+<li>\S：匹配任意可见字符</li>
+<li>\W：匹配任意非Unicode字符集</li>
+<li>[^abc]：匹配a、b、c以外的任意字符</li>
+</ul>
+</li>
+<li><h5 id="字符族"><a href="#字符族" class="headerlink" title="字符族"></a>字符族</h5><ul>
+<li>[abc]：a、b或者c</li>
+<li>[a-zA-z]：a到z或者A到Z</li>
+<li>[a-d[m-p]]：a到d或者m到p，并集</li>
+<li>[a-z&amp;&amp;[def]]：d、e或者f，交集</li>
+<li>[a-z&amp;&amp;[ ^bc]]：a到z，除了b，c，交集减去</li>
+<li>[a-z&amp;&amp;[ ^m-p]]：a到z，减去m到p，交集减去</li>
+</ul>
+</li>
+<li><h5 id="python修饰符"><a href="#python修饰符" class="headerlink" title="python修饰符"></a>python修饰符</h5><ul>
+<li>re.A = 匹配ASCII字符类，影响\w，\W，\B,\b,\D,\d</li>
+<li>re.I = 忽略大小写</li>
+<li>re.L = 做本地化识别匹配</li>
+<li>re.M = 多行匹配，影响^ or $</li>
+<li>re.S =使 . 匹配包括换行符在内的所有字符</li>
+<li>re.U = 匹配Unicod字符集，与re.A相对，默认设置</li>
+<li>re.X = 忽略空格和#后面的注释以获得看起来更易懂的正则</li>
+</ul>
+</li>
+</ul>
+<h4 id="二、实例"><a href="#二、实例" class="headerlink" title="二、实例"></a>二、实例</h4><h5 id="实例1"><a href="#实例1" class="headerlink" title="实例1"></a>实例1</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'123abc你好'</span></span><br><span class="line">re.search(<span class="string">'\d+'</span>, s).group()</span><br><span class="line">re.search(<span class="string">'\w+'</span>, s).group()</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">123</span></span><br><span class="line"><span class="number">123</span>abc你好</span><br></pre></td></tr></table></figure>
+
+<h5 id="实例2：re-A"><a href="#实例2：re-A" class="headerlink" title="实例2：re.A"></a>实例2：re.A</h5><p>修饰符 <code>A</code> 使 <code>\w</code> 只匹配 ASCII 字符，<code>\W</code> 匹配非 ASCII 字符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'123abc你好'</span></span><br><span class="line">re.search(<span class="string">'\w+'</span>, s, re.A).group()</span><br><span class="line">re.search(<span class="string">'\W+'</span>, s, re.A).group()</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">123</span>abc</span><br><span class="line">你好</span><br></pre></td></tr></table></figure>
+
+<p><code>\d</code> 和 <code>\D</code>， <strong>全角和半角</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'０１２３４５６７８９'</span>    <span class="comment"># 全角数字</span></span><br><span class="line">re.search(<span class="string">'\d+'</span>, s, re.U).group()</span><br></pre></td></tr></table></figure>
+
+<p>实例2：re.M</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'aaa\r\nbbb\r\nccc'</span></span><br><span class="line"></span><br><span class="line">re.findall(<span class="string">'^[\s\w]*?$'</span>, s)</span><br><span class="line">re.findall(<span class="string">'^[\s\w]*?$'</span>, s, re.M)</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'aaa\r\nbbb\r\nccc'</span>]        <span class="comment"># 单行模式</span></span><br><span class="line">[<span class="string">'aaa\r'</span>, <span class="string">'bbb\r'</span>, <span class="string">'ccc'</span>]    <span class="comment"># 多行模式</span></span><br></pre></td></tr></table></figure>
+
+<p>实例3：re.S</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'aaa\r\nbbb\r\nccc'</span></span><br><span class="line"></span><br><span class="line">re.findall(<span class="string">'^.*'</span>, s)</span><br><span class="line">re.findall(<span class="string">'^.*'</span>, s, re.S)</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'aaa\r'</span>]</span><br><span class="line">[<span class="string">'aaa\r\nbbb\r\nccc'</span>]</span><br></pre></td></tr></table></figure>
+
+<p>实例4：re.X</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rc = re.compile(<span class="string">r"""</span></span><br><span class="line"><span class="string">\d+ # 匹配数字</span></span><br><span class="line"><span class="string"># 和字母</span></span><br><span class="line"><span class="string">[a-zA-Z]+</span></span><br><span class="line"><span class="string">"""</span>, re.X)</span><br><span class="line">rc.search(<span class="string">'123abc'</span>).group()</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">123</span>abc</span><br></pre></td></tr></table></figure>
+
+<h4 id="三、贪婪和懒惰"><a href="#三、贪婪和懒惰" class="headerlink" title="三、贪婪和懒惰"></a>三、贪婪和懒惰</h4><h5 id="贪婪"><a href="#贪婪" class="headerlink" title="贪婪"></a>贪婪</h5><p>尽可能多的匹配</p>
+<p><code>*</code>、<code>+</code>、<code>{n,}</code> 这些表达式属于贪婪；</p>
+<h5 id="懒惰"><a href="#懒惰" class="headerlink" title="懒惰"></a>懒惰</h5><p>尽可能少的匹配</p>
+<p><code>*?</code>、<code>+?</code>、<code>{n,}?</code> 这些表达式就是懒惰（在贪婪的基础上加上 <code>?</code>）。</p>
+<h5 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'aabab'</span></span><br><span class="line">re.search(<span class="string">'a.*b'</span>, s).group()    <span class="comment"># 这就是贪婪</span></span><br><span class="line">re.search(<span class="string">'a.*?b'</span>, s).group()   <span class="comment"># 这就是懒惰</span></span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aabab</span><br><span class="line">aab</span><br></pre></td></tr></table></figure>
+
+<h4 id="四、自动捕获"><a href="#四、自动捕获" class="headerlink" title="四、自动捕获"></a>四、自动捕获</h4><table>
+<thead>
+<tr>
+<th>(exp)</th>
+<th>匹配exp，并捕获文本到自动命名的组里</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(?Pexp)</td>
+<td>匹配exp，并捕获文本到名称为 name 的组里</td>
+</tr>
+<tr>
+<td>(?:exp)</td>
+<td>匹配exp，不捕获匹配的文本，也不给此分组分配组号</td>
+</tr>
+<tr>
+<td>(?P=name)</td>
+<td>匹配之前由名为 name 的组匹配的文本</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意：在其他语言或者网上的一些正则工具中，分组命名的语法是 <code>(?&lt;name&gt;exp)</code> 或 <code>(?&#39;name&#39;exp)</code> ，但在 Python 里，这样写会报错：This named group syntax is not supported in this regex dialect。Python 中正确的写法是：<code>(?P&lt;name&gt;exp)</code></p>
+</blockquote>
+<p>实例1：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'姓名：张三；性别：男；电话：138123456789'</span></span><br><span class="line">m = re.search(<span class="string">'姓名[:：](\w+).*?电话[:：](\d&#123;11&#125;)'</span>, s)</span><br><span class="line"><span class="keyword">if</span> m:</span><br><span class="line">    name = m.group(<span class="number">1</span>)</span><br><span class="line">    phone = m.group(<span class="number">2</span>)</span><br><span class="line">    print(<span class="string">f'name:<span class="subst">&#123;name&#125;</span>, phone:<span class="subst">&#123;phone&#125;</span>'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name:张三, phone:<span class="number">13812345678</span></span><br></pre></td></tr></table></figure>
+
+<p>实例2：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'''</span></span><br><span class="line"><span class="string">&lt;name&gt;张三&lt;/name&gt;</span></span><br><span class="line"><span class="string">&lt;age&gt;30&lt;/age&gt;</span></span><br><span class="line"><span class="string">&lt;phone&gt;138123456789&lt;/phone&gt;</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line">pattern = <span class="string">r'&lt;(?P&lt;name&gt;.*?)&gt;(.*?)&lt;/(?P=name)&gt;'</span></span><br><span class="line">It = re.findall(pattern, s)</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[(<span class="string">'name'</span>, <span class="string">'张三'</span>), (<span class="string">'age'</span>, <span class="string">'30'</span>), (<span class="string">'phone'</span>, <span class="string">'138123456789'</span>)]</span><br></pre></td></tr></table></figure>
+
+<h4 id="五、零宽断言"><a href="#五、零宽断言" class="headerlink" title="五、零宽断言"></a>五、零宽断言</h4><table>
+<thead>
+<tr>
+<th>(?=exp)</th>
+<th>匹配exp前面的位置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(?&lt;=exp)</td>
+<td>匹配exp后面的位置</td>
+</tr>
+<tr>
+<td>(?!exp)</td>
+<td>匹配后面跟的不是exp的位置</td>
+</tr>
+<tr>
+<td>(?&lt;!exp)</td>
+<td>匹配前面不是exp的位置</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>python中前项界定的表达式必须是定长的</p>
+</blockquote>
+<p>结果</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(?&lt;=aaa)        # 正确</span><br><span class="line">(?&lt;=aaa|bbb)    # 正确</span><br><span class="line">(?&lt;=aaa|bb)     # 错误</span><br><span class="line">(?&lt;=\d+)        # 错误</span><br><span class="line">(?&lt;=\d&#123;3&#125;)      # 正确</span><br></pre></td></tr></table></figure>
+
+<h4 id="六、findall"><a href="#六、findall" class="headerlink" title="六、findall"></a>六、findall</h4><ul>
+<li>如果没有分组，则返回整条正则匹配结果的列表；</li>
+<li>如果有 1 个分组，则返回分组匹配到的结果的列表；</li>
+<li>如果有多个分组，则返回分组匹配到的结果的元组的列表。</li>
+</ul>
+<p>实例</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'aaa123bbb456ccc'</span></span><br><span class="line"></span><br><span class="line">re.findall(<span class="string">'[a-z]+\d+'</span>, s)          <span class="comment"># 不包含分组</span></span><br><span class="line">re.findall(<span class="string">'[a-z]+(\d+)'</span>, s)        <span class="comment"># 包含一个分组</span></span><br><span class="line">re.findall(<span class="string">'([a-z]+(\d+))'</span>, s)      <span class="comment"># 包含多个分组</span></span><br><span class="line">re.findall(<span class="string">'(?:[a-z]+(\d+))'</span>, s)    <span class="comment"># ?: 不捕获分组匹配结果</span></span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'aaa123'</span>, <span class="string">'bbb456'</span>]</span><br><span class="line">[<span class="string">'123'</span>, <span class="string">'456'</span>]</span><br><span class="line">[(<span class="string">'aaa123'</span>, <span class="string">'123'</span>), (<span class="string">'bbb456'</span>, <span class="string">'456'</span>)]</span><br><span class="line">[<span class="string">'123'</span>, <span class="string">'456'</span>]</span><br></pre></td></tr></table></figure>
+
+</center>
+      
+
+      
+      
+              
+                <div class="declare">
+                  <strong>本文作者：</strong>
+                  
+                    Marshal Zheng
+                  
+                  <br>
+                  <strong>本文链接：</strong>
+                  https://github.com/zysps1/2019/09/03/python正则理解与总结/
+                  <br>
+                  <strong>版权声明：</strong>
+                  本作品采用
+                  <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+                  进行许可。转载请注明出处！
+                  
+                    <br>
+                    <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+                  
+                </div>
+              
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">正则表达式</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/marshal_zheng.github.io/categories/前端//" class="article-tag-list-link color3">前端</a>
+        			<a href="/marshal_zheng.github.io/categories/python//" class="article-tag-list-link color2">python</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/marshal_zheng.github.io/categories/前端/HTML//" class="article-tag-list-link color5">HTML</a>
+        			<a href="/marshal_zheng.github.io/categories/python/正则表达式//" class="article-tag-list-link color1">正则表达式</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/zysps1/2019/09/03/python正则理解与总结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/marshal_zheng.github.io/2019/09/03/《机器学习》西瓜书笔记--chapter7贝叶斯分类器/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/marshal_zheng.github.io/2019/09/03/常用LaTeX符号/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LATEX 符号</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#正则理解与总结"><span class="toc-number">1.</span> <span class="toc-text">正则理解与总结</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、正则语法"><span class="toc-number">1.1.</span> <span class="toc-text">一、正则语法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#元字符"><span class="toc-number">1.1.1.</span> <span class="toc-text">元字符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#限定词"><span class="toc-number">1.1.2.</span> <span class="toc-text">限定词</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#反义词"><span class="toc-number">1.1.3.</span> <span class="toc-text">反义词</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#字符族"><span class="toc-number">1.1.4.</span> <span class="toc-text">字符族</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#python修饰符"><span class="toc-number">1.1.5.</span> <span class="toc-text">python修饰符</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、实例"><span class="toc-number">1.2.</span> <span class="toc-text">二、实例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#实例1"><span class="toc-number">1.2.1.</span> <span class="toc-text">实例1</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#实例2：re-A"><span class="toc-number">1.2.2.</span> <span class="toc-text">实例2：re.A</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、贪婪和懒惰"><span class="toc-number">1.3.</span> <span class="toc-text">三、贪婪和懒惰</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#贪婪"><span class="toc-number">1.3.1.</span> <span class="toc-text">贪婪</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#懒惰"><span class="toc-number">1.3.2.</span> <span class="toc-text">懒惰</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#实例"><span class="toc-number">1.3.3.</span> <span class="toc-text">实例</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、自动捕获"><span class="toc-number">1.4.</span> <span class="toc-text">四、自动捕获</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、零宽断言"><span class="toc-number">1.5.</span> <span class="toc-text">五、零宽断言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#六、findall"><span class="toc-number">1.6.</span> <span class="toc-text">六、findall</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "https://github.com/zysps1/marshal_zheng.github.io/2019/09/03/python正则理解与总结/", 
+    sourceId: "python正则理解与总结",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
+  
+
+  
+
+  
+
+  
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '5675bb7c8eac8051b74a',
+  clientSecret: 'f0f194e4debf358dc87b207fcd0454be048df291',
+  repo: 'marshal_zheng.github.io',
+  owner: 'zysps1',
+  admin: ['zysps1'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
     
 
+ 
 
           </div>
         </div>
@@ -290,8 +645,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
@@ -374,11 +729,55 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">个人感悟</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">写作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">LaTeX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学术论文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">feelings</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
             
             <div class="clearfix"></div>

@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1287558/201904/1287558-20190416100220025-1256649231.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1287558/201904/1287558-20190416100240779-888349338.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1287558/201904/1287558-20190416100313284-1815603280.png">
-<meta property="og:updated_time" content="2019-09-03T08:04:42.516Z">
+<meta property="og:updated_time" content="2019-09-03T08:11:18.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器">
 <meta name="twitter:description" content="《机器学习》西瓜书笔记——chapter 7：贝叶斯分类器 Marshal Zheng    2019-04-16  西瓜书笔记更新啦！ 7.1 贝叶斯决策论假设有$N$种可能类别标记，即$y = {c_1,c_2,\cdots,c_N}$，$\lambda_{ij}$是将一个真实标记为$c_j$的样本误分类为$c_i$所产生的损失，基于后验概率$P(c_i | x)$可获得将样本$x$分类为$c">
@@ -242,6 +242,8 @@
 
 <p>西瓜书笔记更新啦！</p>
 <h4 id="7-1-贝叶斯决策论"><a href="#7-1-贝叶斯决策论" class="headerlink" title="7.1 贝叶斯决策论"></a>7.1 贝叶斯决策论</h4><p>假设有$N$种可能类别标记，即$y = {c_1,c_2,\cdots,c_N}$，$\lambda_{ij}$是将一个真实标记为$c_j$的样本误分类为$c_i$所产生的损失，基于后验概率$P(c_i | x)$可获得将样本$x$分类为$c_i$所产生的期望损失，即在样本$x$上的“条件风险”<br>$$<br>R(c_i | x) = \sum_{j=1}^{N} \lambda_{i,j}P(c_j | x)<br>$$<br>为了最小化总体风险，就产生了贝叶斯判定准则：只需在每个样本上选择那个能使条件风险$R(c | x)$最小的类别标记，即<br>$$<br>h^<em>(x) = \mathop{\arg\max}_{c \in y} R(c | x)<br>$$<br>其中，$h^</em>(x)$为贝叶斯最优分类器，与之对应的$R(h^<em>)$为贝叶斯风险，$1-R(h^</em>)$反映了分类器所能达到的最好性能，即通过机器学习所能产生的模型精度的理论上限。</p>
+<a id="more"></a>
+
 <p>具体地，若是最小化分类错误率，则误判损失$\lambda_{ij}$可写为：<br>$$<br>\lambda_{ij} = \left{\begin{array}{cc}<br>        1, &amp; if\quad i=j\<br>        0, &amp; otherwise<br>    \end{array}\right.<br>$$<br>此时条件风险<br>$$<br>R(c_i | x) = 1-P(c | x)<br>$$<br>贝叶斯最优分类器为<br>$$<br>h^*(x) = \mathop{\arg\min}_{c \in y} P(c | x)<br>$$</p>
 <h5 id="判别式模型"><a href="#判别式模型" class="headerlink" title="判别式模型"></a>判别式模型</h5><p>给定x，通过直接建模$P(c | x)$来预测$c$，例如决策树、BP神经网络、支持向量机等</p>
 <p>考虑<br>$$<br>P(C | X) = \frac{P(x,c)}{P(x)}<br>$$<br>基于贝叶斯定理：<br>$$<br>P(C | X) = \frac{P(c)P(x | c)}{P(x)}<br>$$<br>其中等式右边：先验概率，样本x相对于类别c的类条件概率，归一化证据因子。</p>
@@ -642,10 +644,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
@@ -654,15 +652,31 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">feelings</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">写作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学术论文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color1">LaTeX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -674,23 +688,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">写作</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">LaTeX</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学术论文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">feelings</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
             
             <div class="clearfix"></div>
@@ -741,7 +743,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">电子科技大学大四本科生</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2016级电子科技大学本科，网络工程专业，爱好探索、解决问题，追求学习一切有用的知识和技能，包括但不限于各类基础理论、数学方法和逻辑分析，各类编程语言（python，c，matlab……），各类计算机技术（数据库，前端后台），各类图形设计软件（PS,AI……)、视频编辑工具（PR，AE），各类自然和社会学科领域知识。学习ing……学，永无止境！</div>
   	  	
     	</section>
     
